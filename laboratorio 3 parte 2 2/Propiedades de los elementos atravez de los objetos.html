@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion orientada a los objetos</title>
+</head>
+<body>
+    <input type="button" id="btn1" onclick="cambiar1()" value="boton 1">
+    <input type="button" id="btn2" onclick="cambiar2()" value="boton 2">
+    <input type="button" id="btn3" onclick="cambiar3()" value="boton 3">
+
+    <script>
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+
+        btn3.focus();
+        function cambiar1() {
+            btn1.style.width = "250px";
+            btn1.style.height = "150px";
+            btn2.style.backgroundColor = "blue";
+        }
+        function cambiar2() {
+            btn2.style.width = "150px";
+            btn2.style.height = "250px";
+            btn1.style.backgroundColor = "red";
+        }
+    </script>
+</body>
+</html>

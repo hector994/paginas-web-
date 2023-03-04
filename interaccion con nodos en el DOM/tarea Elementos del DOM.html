@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos del DOM </title>
+</head>
+
+<body>
+
+    <div id="contenidos" 
+        style="width: 50%; height:auto; border:thin solid silver; text-align: center;"
+        onmouseover="document.getElementById('contenidos').style.borderColor='black';"
+        onmouseout="document.getElementById('contenidos').style.borderColor='silver';">
+        <ol id="lista1">
+            <p id="tema1">
+                <strong>
+                    World best anime series
+                </strong>
+            </p>
+            <li id="anime1">Sword Art Online</li>
+            <li id="anime2">It is wrong to pick up girls in a dungeon</li>
+            <li id="anime3">Kakegurui</li>
+            <li id="anime4">Psicopass</li>
+        </ol>
+        <input id="btn1" type="button" onclick="modificando()" value="Modifica" />
+    </div>
+
+    <div style="width: 50%; height: auto; border: thin solid silver; text-align: center;"
+        onmouseover="resalta(this)" onmouseout="resalta(this)">
+
+        <ol id="lista2">
+            <p id="tema2">
+                <strong>
+                    World best vampire series
+                </strong>
+            </p>
+
+            <li id="vampire1">Vampire Diaryies</li>
+            <li id="vampire2">The Originals</li>
+            <li id="vampire3">Legacies</li>
+            <li id="vampire4">Crepusculo</li>
+        </ol>
+
+        <input id="btn2" type="button" onclick="eliminando()" value="eliminar" />
+    </div>
+
+    <div id="contenidos" 
+        style="width: 50%; height:auto; border:thin solid silver; text-align: center;"
+        onmouseover="this.style.borderColor='black';" 
+        onmouseout="this.style.borderColor='silver';">
+
+        <ol id="lista3" class="lista3">
+            <p id="tema3">
+                <strong id="demo">
+                    World best movies
+                </strong>
+            </p>
+
+            <li id="vampire1">Alien vs Predator</li>
+            <li id="vampire2">Avatar</li>
+            <li id="vampire3">World war z</li>
+        </ol>
+
+        <input id="btn3" type="button" onclick="agregando()" value="agregar" />
+    </div>
+
+    <div id="contenidos" 
+    style="width: 50%; height:auto; border:thin solid silver; text-align: center;"
+        onmouseover="this.style.borderColor='black';" 
+        onmouseout="this.style.borderColor='silver';">
+
+        <ol id="lista4" class="lista4">
+            <p id="tema4">
+                <strong id="demo1">
+                    World best food
+                </strong>
+            </p>
+
+            <li id="food1">Pupusas</li>
+            <li id="food2">sushi</li>
+            <li id="food3">tacos</li>
+        </ol>
+
+        <input id="btn4" type="button" onclick="reemplazar()" value="reemplazar" />
+    </div>
+
+    <script>
+
+        function modificando() {
+            var anime1 = document.getElementById('anime1');
+            var anime2 = document.getElementById('anime2');
+            anime1.innerHTML = "SAO";
+            anime2.textContent = "Danmachi";
+        }
+
+        function eliminando() {
+            var eliminar = document.getElementById('vampire4');
+            eliminar.remove(eliminar);
+        }
+
+        function agregando() {
+            var nodes = document.createElement('li');
+            var contenido = document.createTextNode("Tom Rider");
+            nodes.appendChild(contenido);
+            document.querySelector('ol.lista3').appendChild(nodes);
+            
+            document.querySelector("#demo").innerHTML = "Las mejores peliculas";
+        }
+
+        function reemplazar() {
+            const element = document.createElement("li");
+            const textNode = document.createTextNode("Tacos al pastor");
+            element.appendChild(textNode);
+
+            const list = document.getElementById("lista4");
+            list.replaceChild(element, list.children[3]);
+        }
+
+        function resalta(elemento) {
+            switch (elemento.style.borderColor) {
+                case 'silver':
+                case 'silver silver silver silver':
+                case '#c0c0c0':
+                    elemento.style.borderColor = 'black';
+                    break;
+                case 'black':
+                case 'black black black black':
+                case '#000000':
+                    elemento.style.borderColor = 'silver';
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+  /* Centrar el formulario en la página */
+  margin: 0 auto;
+  width: 600px;
+  /* Esquema del formulario */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Tamaño y alineación uniforme */
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+     Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+  font: 1em sans-serif;
+
+  /* Tamaño uniforme del campo de texto */
+  width: 400px;
+  box-sizing: border-box;
+  /* Hacer coincidir los bordes del campo del formulario */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Destacado adicional para elementos que tienen el cursor */
+  border-color: #000;
+}
+
+textarea {
+  /* Alinear los campos de texto multilínea con sus etiquetas */
+  vertical-align: bottom;
+  /* Proporcionar espacio para escribir texto */
+  height: 5em;
+}
+
+.button {
+  /* Alinear los botones con los campos de texto */
+  padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+}
+
+button {
+  /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+     entre las etiquetas y sus campos de texto */
+  margin-left: .5em;
+}
+
+
+
+details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: #eeeeee;
+  border: 1px;
+  padding: 1em;
+  border-radius: 1em;
+  margin: auto;
+  cursor: pointer;
+}
+
+details > label {
+  width: 300px;
+  border: 1px;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 1px;
+  margin: auto;
+  text-align: left;
+  position: relative;
+}
+
+details > input {
+  width: 10px;
+  border: 1px;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 100px;
+  margin: auto;
+  position: relative;
+}
+</style>
+<body>
+  <br>
+  <h1 style="text-align: center;">Inscribete ya a nuestro pagina web</h1>
+  <br>
+    <form action="/formulario.html" method="post">
+        <ul>
+            <li>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name">
+            </li>
+            <li>
+                <label for="lastname">Apellido:</label>
+                <input type="text" name="apellido" id="lastname">
+            </li>
+            <li>
+                <label for="birthdate">Fecha de nacimiento:</label>
+                <input type="date" name="birthdate" id="birthdate">
+            </li>
+            <li>
+                <label for="cargo">Selecione:</label>
+                <select name="cargo" id="cargo">
+                    <option value="student">Estudiante</option>
+                    <option value="lic">Docente</option>
+                    <option value="invitado">Invitado</option>
+                </select>
+            </li>
+            <li>
+                <label for="mail">e-mail:</label>
+                <input type="email" name="mail" id="mail">
+            </li>
+            <li>
+
+                <details open>
+                    <summary>Genero: </summary>
+                    
+                    <input type="radio" name="m" id="m" value="m">
+                    <label for="m" >Masculino</label><br>
+                    <input type="radio" name="f" id="f" value="f">
+                    <label for="f">Femenino</label>
+                </details>
+  
+            </li>
+            <li>
+                <details open>
+                    <summary>Opciones</summary>
+                    <input type="checkbox" name="noty" id="noty" value="noty">
+                    <label for="student">Quiero recivir notificaciones</label><br>
+                    <input type="checkbox" name="contract" id="contract" value="contract">
+                    <label for="lic">Quiero recibir mensajes a mi correo</label>
+                </details>
+
+            </li>
+            <li>
+                <details>
+                    <summary>Cuentanos mas sobre ti:</summary> 
+                    <textarea name="about" id="about" cols="30" rows="10"></textarea>
+                </details>             
+            </li>
+            <li>
+                <button type="submit" onclick="alert('Registrado exitosamenet')">sign up</button>
+                <button type="submit">cancelar</button>
+            </li>
+        </ul>
+
+    </form>
+</body>
+</html>

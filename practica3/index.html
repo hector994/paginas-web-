@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const tardio = new Vue({
+        name: "App",
+        data() {
+            return {
+                searchQuery: null,
+                resources: [
+                    { id: 1, title: "javascript for dummies" },
+                    { id: 2, title: "vue for dummies" },
+                    { id: 3, title: "dos for dummies" },
+                    { id: 4, title: "windows for dummies" },
+                    { id: 5, title: "html for dummies" }
+                ]
+            };
+        },
+        computed: {
+            resultQuery() {
+                if (this.searchQuery) {
+                    return this.resources.filter(item => {
+                        return this.searchQuery
+                            .split(" ")
+                            .every(v => item.title.toLowerCase().includes(v));
+                    });
+                } else {
+                    return this.resources;
+                }
+            }
+        }
+    });
+</script>
+
+<body>
+
+    <div id="matris">
+        <h3>Agregue</h3>
+        <input type="text" v-model="nombre" placeholder="ingrese nombre">
+        <button @Click="agregarPersona">Insertar</button>
+        <h3>Lista</h3>
+        <ul v-for="item in Personas">
+            <li>{{item.nombre}}</li>
+        </ul>
+        <h3>
+            Estado
+        </h3>
+        <ul>
+            <li v-for="item in activos">{{item.nombre}}</li>
+        </ul>
+        <h3>
+            buscados
+        </h3>
+
+        <input type="text" v-model="persona" @input="filterResults(persona)">
+        <ul>
+            <li v-for="(people, nombre) in filter" :key="nombre">{{ people.nombre }}</li>
+        </ul>
+
+    </div>
+
+
+
+
+    <footer>
+        <label for="">Hector Eduardo Murillo Herrera</label>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

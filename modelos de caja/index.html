@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelos de caja con css</title>
+</head>
+<style>
+    body{
+        background-color: grey;
+
+    }
+    #global{
+        width: 1000px;
+        height: 850px;
+        border-style:double ;
+        background-color: beige;
+        padding: 1%;
+        margin: 10px auto 10px auto;
+    }
+    #cajita{
+        background-color: brown;
+        width: 95%;
+        height: 80px;
+        border-style: dotted;
+        margin: 0% auto 0% auto;
+        float: left;
+        margin-left: 10px;
+        padding: 1%;
+    }
+    #formulario{
+        background-color: goldenrod;
+        float: left;
+        width: 600px;
+        height: 170px;
+        border-style: ridge;
+        margin: 5px auto 10px auto;
+        padding: 1%;
+        margin-left: 25%;
+    }
+    #divtabla{
+        background-color: burlywood;
+        float: left;
+        width: 600px;
+        height: auto;
+        color: blue;
+        border-style: double;
+        margin: 5px auto 5px auto;
+        margin-left: 25%;
+        padding: 1%;
+    }
+    #divtabla2{
+        background-color: rgb(203, 222, 135);
+        float: left;
+        width: 600px;
+        height: auto;
+        color: rgb(17, 84, 228);
+        border-style: dotted;
+        margin: 5px auto 5px auto;
+        margin-left: 25%;
+        padding: 1%;
+    }
+    #tabla{
+        width: 100%;
+        border: 2px solid tomato;
+        text-align: center;
+    }
+    #tabla2{
+        width: 100%;
+        border: 2px solid rgb(161, 195, 223);
+        text-align: center;
+    }
+
+    th, td{
+        border: 2px solid sienna;
+        width: 25%;
+    }
+    th{
+        color: rgb(155, 41, 64);
+    }
+</style>
+<body>
+    
+    <div id="global">
+        <div id="cajita">
+            <h2>Banner</h2>
+        </div>
+        <!-- <div id="cajita">
+            <h2>cajita 2</h2>
+        </div>
+        <div id="cajita">
+            <h2>cajita 3</h2>
+        </div> -->
+        <div id="formulario">
+            <label for="name">Nombre:</label>
+            <input type="text" name="" id="">
+            <br>
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" name="" id="">
+            <br>
+            <label for="genero">Sexo:</label>
+            <br>
+            <input type="radio" id="hombre" name="se" value="M">
+            <label for="hombre">Hombre</label><br>
+            <input type="radio" id="mujer" name="se" value="F">
+            <label for="mujer">Mujer</label><br>
+            <button>Enviar</button>
+            <input type="button" value="cancelar" id="cancel">
+        </div>
+        <div id="divtabla">
+            <table id="tabla">
+                <tr>
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
+        </div>
+
+        <div id="divtabla2">
+            <table id="tabla2">
+                <tr>
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

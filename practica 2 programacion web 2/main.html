@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Hector Eduardo Murillo Herrera</h3>
+    <div id="main">
+        <h2 v-model="Tareas">{{Tareas}} </h2>
+
+        <ul v-for="item in Tareas">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div id="matris">
+        <ul v-for="item in Personas">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div id="molar">
+        <input type="text" v-model="Tarea" placeholder="ingrese sus tareas">
+        <button @Click="agregarTarea">Insertar</button>
+        <ul v-for="item in Tares">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div id="animal">
+        <label for="">nombre:</label>
+        <input type="text" v-model="nombre" placeholder="ingrese el nombre">
+        <label for="">raza:</label>
+        <input type="text" v-model="raza" placeholder="ingrese la raza">
+        <button @Click="agregarAnimales">Ingreso de mascotas</button>
+        <ul v-for="item in Animales">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+
+    <div id="app-5">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.nombre }}
+            {{ todo.apellido }}
+            {{ todo.dui }}
+          </li>
+
+        </ol>
+    </div>
+
+    <footer>
+        <label for="">Hector Eduardo Murillo Herrera</label>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+</head>
+<body>
+    <div style="align-content: center;"> 
+        <div>
+            Mi nombre es {{nombre}}
+        </div>
+        <div>
+            La carrera que actualmente curso se llama {{carrera}}.
+        </div>
+        mis hobbies favoritos son los siguientes:
+    </div>
+    <div>
+        {{#datos}}
+        <li>-{{nombre}}</li>
+        {{/datos}}
+    </div>
+    <br>
+    <br>
+    <div>
+        Y en un apartado (div) describir la utilidad de las plantillas con Node.js
+    </div>
+    <div>
+        Las plantillas nos otorgan funcionalidad y orden en nuestro codigo.
+        Se pueden utilizar para que nuestra pagina web sea dinamica.
+        Las plantillas las podemos ocupar para no repetir nuestro codigo.
+    </div>
+</body>
+</html>

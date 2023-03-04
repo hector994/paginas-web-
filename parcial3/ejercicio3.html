@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Frame works</h1>
+
+    <input type="text" name="" id="texto1">
+    <input type="button" value="info" onclick="info()">
+
+    <div id="resultado">
+
+    </div>
+
+    <script>
+
+        function info() {
+            var valor = document.getElementById("texto1").value;
+            var resultados = document.getElementById("resultado")
+            switch (valor) {
+                case 'bootstrap':
+                    resultados.innerHTML = "Bootstrap 5.2.0 2022";
+                    break;
+                case 'materialize':
+                    resultados.innerHTML = "Materialize 1.0 2020";
+                    break;
+                case 'vue':
+                    resultados.innerHTML = "Vue 3.0.1 2020";
+                    break;
+                default:
+                    resultados.innerHTML = "No conocemos ese framework";
+                    break;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

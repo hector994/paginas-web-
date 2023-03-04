@@ -1,0 +1,30 @@
+p.p1 {
+    color: red;
+  }
+  
+  p.p2 {
+    color: blue;
+  }
+  
+  p[class] {
+    text-transform: uppercase;
+  }
+  
+  
+  p[id] {
+    text-transform: lowercase ;
+  } 
+  
+
+
+  p.p3 {
+    color: red;
+  }
+  
+  p.p4 {
+    color: blue;
+  }
+  
+  p[class="p3 p4"] {
+    text-transform: uppercase;
+  }

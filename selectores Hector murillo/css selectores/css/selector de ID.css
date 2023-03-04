@@ -1,0 +1,11 @@
+p#aviso {
+    color: red;
+}
+  
+#aviso {
+    color: red;
+}
+
+*#aviso {
+    color: red;
+}

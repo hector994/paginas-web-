@@ -1,0 +1,53 @@
+/* div{
+    border: black 5px solid;
+    margin: 5px;
+    padding: 4px;
+}
+div p:first-child{
+    color: red;
+} */
+
+/* a :link{
+    background-color: green;
+    background-color: cyan;
+}
+a :visited{
+    background-color: blueviolet;
+    color: chartreuse;
+}
+
+a{
+    background-color: azure;
+    color: brown;
+    border: orange 3px solid;
+    outline-color: cadetblue;
+} */
+
+/* a :link, a :visited{
+    background-color: lightgreen;
+}
+a :link{
+    background-color: lightgreen;
+}
+a{
+    background-color: lightgreen;
+} */
+/* 
+p{
+    background-color: white;
+    color: black;
+}
+
+/* a :hover{
+    background-color: pink;
+    color: purple;
+} */
+p :active{
+    background-color: rgb(194, 255, 192);
+    color: rgb(128, 0, 0);
+} */
+input:focus{
+    border: cadetblue 2px dotted;
+    padding: 2px;
+}
+

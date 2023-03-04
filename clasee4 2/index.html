@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Hector Murillo</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        width: 19%;
+        margin: 10px 90px 10px 90px;
+        float: left;
+        border: #F00 solid 2px;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 10px;
+    }
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //document.getElementById("aumentar1").addEventListener("click",aumentar,false);
+        //document.getElementById("disminuir1").addEventListener("click",disminuir,false);
+
+        var botonres = document.querySelectorAll("input");
+
+        for (let i = 0; botonres.length; i++) {
+            botonres[i].addEventListener("click", aumentarL, false);
+            botonres[i].addEventListener("click", disminuirL, false);
+            // botonres[i].addEventListener("click", reseter, false);
+            botonres[i].addEventListener("click", defaultdiv, false);
+            botonres[i].addEventListener("click", aumentarImg, false);
+            botonres[i].addEventListener("click", disminuirImg, false);
+
+        }
+
+    });
+    function aumentar() {
+        var tamDefto = $("#letra1").css("font-size");
+        alert("tamDefto");
+        tamDefto = parseInt(tamDefto);
+        $("#letra1").css("font-size", tamDefto * 1.10);
+    }
+    function aumentarL(e) {
+        var zonadectuacion;
+        if (e.target == aumentar1) {
+            zonadectuacion = "#letra1";
+        }
+        else if (e.target == aumentar2) {
+            zonadectuacion = "#letra2";
+        }
+        else if (e.target == aumentar3) {
+            zonadectuacion = "#letra3";
+        }
+
+        var tamDefto = $(zonadectuacion).css("font-size");
+        //alert("tamDefto");
+        tamDefto = parseInt(tamDefto);
+        $(zonadectuacion).css("font-size", tamDefto * 1.20);
+    }
+    function disminuir() {
+        var tamDefto = $("#letra1").css("font-size");
+        alert("tamDefto");
+        tamDefto = parseInt(tamDefto);
+        $("#letra1").css("font-size", tamDefto * 0.90);
+    }
+    function disminuirL(e) {
+        var zonadectuacion;
+        if (e.target == disminuir1) {
+            zonadectuacion = "#letra1";
+        }
+        else if (e.target == disminuir2) {
+            zonadectuacion = "#letra2";
+        }
+        else if (e.target == disminuir3) {
+            zonadectuacion = "#letra3";
+        }
+
+        var tamDefto = $(zonadectuacion).css("font-size");
+        //alert("tamDefto");
+        tamDefto = parseInt(tamDefto);
+        $(zonadectuacion).css("font-size", tamDefto * 0.90);
+    }
+    function reseter(e) {
+        var zonadectuacion;
+        if (e.target == reset1) {
+            zonadectuacion = "#letra1";
+        }
+        else if (e.target == reset2) {
+            zonadectuacion = "#letra2";
+        }
+        else if (e.target == reset3) {
+            zonadectuacion = "#letra3";
+        }
+
+        //var tamDefto = $(zonadectuacion).css("font-size");
+        //alert("tamDefto");
+        tamDefto = 16;
+        $(zonadectuacion).css("font-size", tamDefto);
+    }
+
+    function defaultdiv(e) {
+        var zonadectuacion;
+        var imagesize;
+        if (e.target == reset1) {
+            zonadectuacion = "#letra1";
+        }
+        else if (e.target == reset2) {
+            zonadectuacion = "#letra2";
+        }
+        else if (e.target == reset3) {
+            zonadectuacion = "#letra3";
+        }
+        else if (e.target == reset4) {
+            imagesize = "#img1";
+        }
+        $(imagesize).css({
+            width: function (index, value) {
+                return 75;
+            },
+            height: function (index, value) {
+                return 75;
+            }
+        });
+        $(zonadectuacion).css({
+            "font-size": 16,
+            "border-color": function () {
+                return "aqua";
+            }
+        });
+
+    }
+
+    function aumentarImg(e) {
+        var zonadectuacion;
+        if (e.target == aumentar4) {
+            zonadectuacion = "#img1";
+        }
+        $(zonadectuacion).css({
+            width: function (index, value) {
+                return parseFloat(value) * 1.2;
+            },
+            height: function (index, value) {
+                return parseFloat(value) * 1.2;
+            }
+        });
+    }
+
+    function disminuirImg(e) {
+        var zonadectuacion;
+        if (e.target == disminuir4) {
+            zonadectuacion = "#img1";
+        }
+        $(zonadectuacion).css({
+            width: function (index, value) {
+                return parseFloat(value) * 0.90;
+            },
+            height: function (index, value) {
+                return parseFloat(value) * 0.90;
+            }
+        });
+    }
+
+
+
+</script>
+
+<body>
+    <h1>Bienvenidos a [Letras de las canciones del momento]</h1>
+    <div id="letra1">
+        <h2>Leon Larregui</h2>
+        <p style="text-align: center;">
+            Locos -
+            Estoy contento, de tenerte cerca muy cerca de mi que me digas loco, que me des de besos y que te rías de mi
+            sabes que quiero decir, ya no me mires así, no yo simplemente puedo decirte que eres lo más bonito que he
+            visto en toda mi vida yo sé que nunca te lo he dicho y me da miedo confesar pero antes quiero besarte
+            llevo un rato tratando de decirte que ya no puedo vivir sin ti llevo años tratando de decirte que te amo
+            estoy contento, de tenerte cerca muy cerca de mi que me digas loco, que me des de besos y que te rías de mi
+            sabes que quiero decir, ya no me mires así, no
+            yo simplemente puedo decirte que eres lo más bonito que he visto en toda mi vida yo sé que nunca te lo he
+            dicho y me da miedo confesar pero antes quiero besarte llevo un rato tratando de decirte que ya no puedo
+            vivir sin ti llevo años tratando de decirte que te amo
+            Esta noche, estás loca como yo esta noche esta noche, estás loca como yo estás loca
+
+        </p>
+        <table>
+            <tr>
+                <td style="text-align: left;">
+                    <input type="button" value="Aumentar" id="aumentar1">
+                </td>
+                <td style="text-align: left;">
+                    <input type="button" value="Reset" id="reset1">
+                </td>
+                <td style="text-align: right;">
+                    <input type="button" value="Disminuir" id="disminuir1">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="letra2">
+        <h2>belinda</h2>
+        <p style="text-align: center;">
+            angel once in your life span -
+            aquí estoy, tú también aunque sea en la imaginación, baby esta vez quiero ser la Luna llena que te espera y
+            te ilumina como amiga te he sido fiel ahora te llevo en la piel se que no va a suceder pero lo puedo soñar
+            te digo, somos los dos como el aire que esta flotando libre en la inmensidad oigo tu voz, sueño contigo y
+            eres mi ángel de paz déjame volar a tu lado yo por siempre quiero estar tus alas me llenan el alma
+            tu sello de amor, lo llevo en la piel ser solo amigos no es fácil, baby despertar es un dolor si no es
+            verdad lo que yo más quiero y aun espero
+            como amiga te he sido fiel ahora te llevo en la piel cuando se va a terminar o cuando se hará realidad
+            te digo somos los dos como el aire que esta flotando libre en la inmensidad oigo tu voz, sueño contigo y
+            eres mi ángel de paz déjame volar a tu lado yo por siempre quiero estar tus alas me llenan el alma
+            te digo somos los dos como el aire que esta flotando libre en la inmensidad tus alas me llenan el alma
+            tanto miedo tengo de perderte tanto miedo de no verte más aunque eres mi amigo para mi algo más
+            este bello secreto mi corazón guardaras todo lo he soñado y era contigo
+            te digo somos los dos como el aire que esta flotando libre en la inmensidad oigo tu voz, sueño contigo y
+            eres mi ángel de paz déjame volar a tu lado yo por siempre quiero estar tus alas me llenan el alma
+            te digo somos los dos como el aire que esta flotando libre en la inmensidad oigo tu voz, sueño contigo y
+            eres mi ángel de paz déjame volar a tu lado yo por siempre quiero estar tus alas me llenan el alma
+            aquí estoy, tú también aunque sea en la imaginación, baby
+        </p>
+        <table>
+            <tr>
+                <td style="text-align: left;">
+                    <input type="button" value="Aumentar" id="aumentar2">
+                </td>
+                <td style="text-align: left;">
+                    <input type="button" value="Reset" id="reset2">
+                </td>
+                <td style="text-align: right;">
+                    <input type="button" value="Disminuir" id="disminuir2">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="letra3">
+        <h2>camila</h2>
+        <p style="text-align: center;">
+            Coleccionista de canciones -
+            Tú, coleccionista de canciones dame razones para vivir tú, la dueña de mis sueños quédate en ellos y hazme
+            sentir y así, en tu misterio poder descubrir el sentimiento eterno
+            tú, con la Luna en la cabeza el lugar en donde empieza el motivo y la ilusión de mi existir tan solo tú,
+            solamente quiero que seas tú mi locura, mi tranquilidad y mi delirio, mi compás y mi camino solo tú,
+            solamente quiero que seas tú yo pongo en tus manos mi destino porque vivo para estar siempre, siempre,
+            siempre, siempre contigo, amor
+            tú, coleccionista de canciones mil emociones son para ti tú, lo que soñé mi vida entera quédate en ella y
+            hazme sentir y así, ir transformando la magia de ti en un respiro del alma
+            tú, con la Luna en la cabeza el lugar en donde empieza el motivo y la ilusión de mi existir tan solo tú,
+            solamente quiero que seas tú mi locura, mi tranquilidad y mi delirio, mi compás y mi camino solo tú,
+            solamente quiero que seas tú yo pongo en tus manos mi destino porque vivo para estar siempre contigo
+            ya no queda más espacio en mi interior has llenado con tu luz cada rincón es que por ti que con el tiempo mi
+            alma siente diferente
+            solo tú, solamente quiero que seas tú mi locura, mi tranquilidad y mi delirio, mi compás y mi camino solo
+            tú, solamente quiero que seas tú yo pongo en tus manos mi destino porque vivo para estar siempre, siempre,
+            siempre, siempre contigo, amor
+
+        </p>
+        <table>
+            <tr>
+                <td style="text-align: left;">
+                    <input type="button" value="Aumentar" id="aumentar3">
+                </td>
+                <td style="text-align: left;">
+                    <input type="button" value="Reset" id="reset3">
+                </td>
+                <td style="text-align: right;">
+                    <input type="button" value="Disminuir" id="disminuir3">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="letra4">
+        <h2>albums</h2>
+        <p style="text-align: center;">
+            <img id="img1" src="https://www.barboflacmusic.com/wp-content/uploads/2018/06/Belinda-Frente-1014x1024.jpg"
+                alt="album" width="75" height="75">
+        </p>
+        <table>
+            <tr>
+                <td style="text-align: left;">
+                    <input type="button" value="Aumentar" id="aumentar4">
+                </td>
+                <td style="text-align: left;">
+                    <input type="button" value="Reset" id="reset4">
+                </td>
+                <td style="text-align: right;">
+                    <input type="button" value="Disminuir" id="disminuir4">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <label for="">Hector Eduardo Murillo Herrera</label>
+    </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

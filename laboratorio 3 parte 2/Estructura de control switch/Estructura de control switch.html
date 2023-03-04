@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch example</title>
+</head>
+
+<body>
+    <form action="">
+        <p>
+            De la siguiente suma escribe el resultado [2+2]
+        </p>
+
+        <input type="text" placeholder="ingrese el resultado" id="num">
+        <input type="button" onclick="sumar()" value="comprobar">
+        <div id="suma">
+
+        </div>
+    </form>
+</body>
+
+<script>
+    function sumar() {
+        var result =  parseInt(document.getElementById("num").value);
+
+        switch (result) {
+            case 3:
+                document.getElementById("suma").innerHTML = "<span style='color:red;'>te falto +1</span>";
+                break;
+            case 4:
+                document.getElementById("suma").innerHTML = "<span style='color:green;'>correcto</span>";
+                break;
+            case 5:
+                document.getElementById("suma").innerHTML = "<span style='color:red;'>te pasaste +1</span>";
+                break;
+
+            default:
+                document.getElementById("suma").innerHTML = "<span style='color:blue;'>Intententalo de nuevo</span>";
+
+                break;
+        }
+    }
+
+</script>
+
+</html>

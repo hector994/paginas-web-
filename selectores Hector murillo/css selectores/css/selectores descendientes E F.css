@@ -1,0 +1,26 @@
+div {
+    border: red 3px solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+div p {
+    color: red;
+}
+
+
+
+div[class] {
+    border: rgb(17, 0, 255) 3px solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+div p[class] {
+    color: rgb(0, 238, 255);
+}
+  
+div li p[class]{
+    color: rgb(25, 0, 255);
+}
+  

@@ -1,0 +1,19 @@
+.principal{
+    background: royalblue;
+    color: beige;
+    text-align: center;
+}
+
+.secundario{
+    background: darkblue;
+    color: beige;
+    text-align: center;
+}
+
+/* agrear un borde amarillo a todos los 
+elementos que tengan la clase col*/
+
+div[class|="col"]{
+    border: 2px solid orange;
+    padding: 1em;
+}

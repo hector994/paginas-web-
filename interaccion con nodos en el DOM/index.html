@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interaccion con nodos en el DOM</title>
+</head>
+<body>
+    <ol id="lista">
+        <p id="top">
+            Top Products <strong> Innovation</strong>
+        </p>
+
+        <li id="prod1">Laptop intel core i9</li>
+        <li id="prod2">Imac pro</li>
+        <li id="prod3">Laptop intel core i5</li>
+    </ol>
+    <script>
+        var elemento1 = document.getElementById('prod1');
+        var elemento2 = document.getElementById('prod2');
+        var elemento3 = document.getElementById('prod3');
+        elemento1.innerHTML = "New Product";
+        elemento2.textContent = "New product <i>Agregado</i>";
+        elemento3.innerHTML = "New product <i>Agregado</i>";
+
+
+        var elemento = document.createElement('li');
+        var contenido = document.createTextNode("Mi nuevo texto");
+        elemento1.appendChild(contenido);
+
+        var elementoPadre = document.getElementsByTagName("li")[0].parentNode;
+        var referencia = document.getElementsByTagName("li")[0];
+        elementoPadre.replaceChild(elemento1,referencia);
+
+
+        var elementoPadr = document.getElementsByTagName("li")[1].parentNode;
+        var referen = document.getElementsByTagName("li")[1];
+        elementoPadr.removeChild(referen);
+        
+
+    </script>
+</body>
+</html>

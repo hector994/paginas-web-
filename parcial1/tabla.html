@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>tablat</title>
+</head>
+<style>
+    #content {
+        position: absolute;
+        min-height: 70%;
+        width: 80%;
+        top: 10%;
+        left: 5%;
+    }
+
+    .selected {
+        cursor: pointer;
+    }
+
+    .selected:hover {
+        background-color: #9705c0;
+        color: white;
+    }
+
+    .seleccionada {
+        background-color: rgb(128, 0, 0);
+        color: white;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        //llamada a funciones
+        $('#btnAgregar').click(function () {
+            agregar();
+            agregados();
+        });
+
+        $('#btnEliminar1').click(function () {
+            eliminar(id_fila_selected);
+        });
+
+        $('#btnEliminarTodo').click(function () {
+            eliminarTodasFilas();
+        });
+
+    });
+
+    var cont = 0;
+    var id_fila_selected = [];
+
+    function agregar() {
+        cont++;
+        var fila =
+            '<tr class="selected" id="fila' + cont + '"onclick="seleccionar(this.id);"><td>'
+            + cont + '</td><td> The Vampire Diaries (nombre por defecto) </td> <td> Serie de Vampiros </td> </tr>'
+        $('#tabla').append(fila);
+        reordenar();
+
+    }
+
+    function seleccionar(id_fila) {
+        if ($('#' + id_fila).hasClass('seleccionada')) {
+            $('#' + id_fila).removeClass('seleccionada');
+        }
+        else {
+            $('#' + id_fila).addClass('seleccionada');
+        }
+        //2702id_fila_selected=id_fila;
+        id_fila_selected.push(id_fila);
+    }
+
+
+    function eliminar(id_fila) {
+        /*$('#'+id_fila).remove();
+        reordenar();*/
+        for (var i = 0; i < id_fila.length; i++) {
+            $('#' + id_fila[i]).remove();
+        }
+
+        reordenar();
+    }
+
+    function eliminarTodasFilas() {
+        $('#tabla tbody tr').each(function () {
+            $(this).remove();
+        });
+
+    }
+
+    function reordenar() {
+        var num = 1;
+        $('#tabla tbody tr').each(function () {
+            $(this).find('td').eq(0).text(num);
+            num++;
+        });
+    }
+
+
+</script>
+
+</head>
+
+<body>
+    <div id="content">
+        <label for="">Agregar filas de manera dinámica con jQuery.</label>
+        <button id="btnAgregar" class="btn btn-success ">Agregar</button>
+        <button id="btnEliminar1" class="btn btn-warning">Eliminar</button>
+        <button id="btnEliminarTodo" class="btn btn-danger">Eliminar Todo</button>
+        <table id="tabla" class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Número</td>
+                    <td>Serie</td>
+                    <td>Descripción</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+
+</html>

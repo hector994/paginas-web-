@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas y elementos interactivos</title>
+</head>
+<body>
+    <h1>Actividad de listas y detalles en HTML</h1>
+    <p>Acontinuacion veremos algunos ejemplos en los que podemos aplicar los tipos de listas y los destalles en html.</p>
+
+    <p>Los detalles nos permiten ocultar porciones de nuestra pagina que solo se muestran si hacemos click en un pequeño triangulo que se nos muestra </p>
+
+    <details>
+        <summary>Spoiler de la pelicula Principe de persia</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sunt in, repellat vitae molestiae exercitationem facilis, odio sed ipsum doloribus accusantium! Atque numquam debitis vero, sequi vel molestias quibusdam ab.</p>
+    </details>
+
+    <p>Nos damos cuenta que nuestra pagina oculta algo.
+        <br>
+        Pero podemos tambien hacer que la pagina nos muestre desde un inicio lo que se nos oculta:
+    </p>
+
+    <details open>
+        <summary>Datos personales </summary>
+        <p>Nombre: <input type="text" placeholder="Your name"></p>
+        <p>Apellido: <input type="text" placeholder="Your lastname"></p>
+        <p>Telefono: <input type="text" placeholder="Your phone"></p>
+    </details>
+
+    <br>
+    <p>Tambien podemos agregar listas dentro de un detalle, la lista acontinuacion esta en desorden ya que nonos importa el orden de los objetos de la lista:</p>
+    <details open>
+        <summary>Mis cosas favoritas</summary>
+        <ul>
+            <li type="square">Mi lenguaje favorito es java</li>
+            <li type="disc">Mi IDE favorito es Netbeans</li>
+            <li type="square">Mi profesion es desarrollador de software</li>
+            <li type="circle">Me gusta la musica</li>
+        </ul>
+    </details>
+
+    <br>
+    <p>si queremos una lista ordena, como cuando necesitamos que se siga una serie de pasos:</p>
+
+    <details open>
+        <summary>Pasos para construir una pagina webb</summary>
+        <ol>
+            <li>primero necesitamos una computadora</li>
+            <li>segundo necesitamos un editor de codigo</li>
+            <li>tercero necesitamos saber programar</li>
+            <li>por ultimo necesitamos un hosting</li>
+        </ol>
+    </details>
+
+    <br>
+
+    <p>Listas de definiciones, estas listas contienen una terminologia y luego se obtine su definicion observe abajo: </p>
+
+    <h3>Menus</h3>
+    <dl>
+        <dt>Plato del dia</dt>
+        <dd>varia segun el dia y su precio es simre el mismo sin iportar lo que traiga</dd>
+
+        <dt>Bomyorno</dt>
+        <dd>es un plato estilo frances que consta de carne vejetales y frijoes, la carne esta a medio termino</dd>
+
+        <dt>escarlato</dt>
+        <dd>son fideos bañados en salsa roja color escarlata picante</dd>
+
+        <dt>tacos</dt>
+        <dd>carne a eleccion de pollo rest o cerdo, envuelto en una tortilla de maiz recien hecha</dd>
+    </dl>
+
+    <br>
+
+    <p>Tambien podemos poner listas dentro de una lista de definicions:</p>
+
+    <h2>Eladeria</h2>
+    <dl>
+        <dt>Elado de las nieves:</dt>
+        <dd>
+            <ul>
+                <li>Hielo picado como la nieve</li>
+                <li>sabor a eleccion vainilla o chocolate o mixto</li>
+                <li>Chispas de chocolate o una oreo</li>
+            </ul>
+        </dd>
+
+        <dt>Elado sandwich:</dt>
+        <dd>
+            <ul>
+                <li>sabor a elecion fresa o vainilla</li>
+                <li>dos laminas de chocolate que envuelve al elado</li>
+                <li>oreo en polvo o chispas de chocolate</li>
+            </ul>
+        </dd>
+
+    </dl>
+
+<footer>Hecho por: Hector Eduardo Murillo Herrera, Todos los derechos reservados. </footer>
+</body>
+</html>

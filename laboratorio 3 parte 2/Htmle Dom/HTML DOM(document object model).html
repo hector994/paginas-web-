@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">
+        Diseño Web Adaptable
+    </h1>
+    <p id="uv">
+        UV: 4
+    </p>
+    <p id="requir">
+        Prerequisito: DPW
+    </p>
+    <p id="codigo">
+        Codigo: DWA
+    </p>
+    <div id="message">
+
+    </div>
+    <input type="button" value="Inscribir">
+    <script>
+        var elemntoP = document.getElementsByTagName("p");
+        var elementoInput = document.getElementsByTagName("input");
+
+        //Agregando nodos a nuesra pagina
+        //1 - crear el elemento
+        var elemento = document.createElement("h2");
+        //2 - crear un nodo de texto al elemento
+        var contenido = document.createTextNode("Click para inscribir la meteria");
+        //3 - Añadir el nodo de texto al elemento
+        elemento.appendChild(contenido);
+        //4 - Agregar atributo al eleemnto
+        elemento.setAttribute("align","center");
+        //5 - Agregar el elemento al documento
+        document.getElementById('message').appendChild(elemento);
+
+    </script>
+</body>
+</html>

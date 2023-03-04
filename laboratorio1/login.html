@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to your account spotify</title>
+</head>
+<style>
+    form {
+  /* Centrar el formulario en la página */
+  margin: 0 auto;
+  width: 600px;
+  /* Esquema del formulario */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Tamaño y alineación uniforme */
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+     Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+  font: 1em sans-serif;
+
+  /* Tamaño uniforme del campo de texto */
+  width: 400px;
+  box-sizing: border-box;
+  /* Hacer coincidir los bordes del campo del formulario */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Destacado adicional para elementos que tienen el cursor */
+  border-color: #000;
+}
+
+textarea {
+  /* Alinear los campos de texto multilínea con sus etiquetas */
+  vertical-align: bottom;
+  /* Proporcionar espacio para escribir texto */
+  height: 5em;
+}
+
+.button {
+  /* Alinear los botones con los campos de texto */
+  padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+}
+
+button {
+  /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+     entre las etiquetas y sus campos de texto */
+  margin-left: .5em;
+}
+
+
+
+details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: #eeeeee;
+  border: 1px;
+  padding: 1em;
+  border-radius: 1em;
+  margin: auto;
+  cursor: pointer;
+}
+
+details > label {
+  width: 100px;
+  border: 1px;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 1px;
+  margin: auto;
+  text-align: left;
+  position: relative;
+}
+
+details > input {
+  width: 10px;
+  border: 1px;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 100px;
+  margin: auto;
+  position: relative;
+}
+</style>
+<body>
+    <nav style="background-color:rgb(192, 226, 240); height: 40px; margin:10px auto 10px auto; text-align: left;font-size:2vw;">
+        <a href="dashboar.html" >Home</a>
+        <a href="login.html">Login</a>
+      </nav>
+    <br>
+    <h1 style="text-align: center;">Sign in into your account</h1>
+    <br>
+      <form action="/formulario.html" method="post">
+          <ul>
+              <li>
+                  <label for="mail">e-mail:</label>
+                  <input type="email" name="mail" id="mail">
+              </li>
+              <li>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">      
+              </li>
+              <li>
+                  <button type="submit" onclick="alert('Registrado exitosamenet')">sign in</button>
+                  <label for="o">&oacute;</label>
+                  <label for="register"><a href="signup.html">Registrate</a></label>
+              </li>
+          </ul>
+  
+      </form>
+</body>
+</html>

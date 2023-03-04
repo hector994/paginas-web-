@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/ejercicio3.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tarta.css">
+
+  <title>La tartaleta & Bistro - Hector Murillo</title>
+</head>
+
+<body>
+  <!-- Hector Eduardo Murillo Herrera -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col s3 m3 l3">
+
+      </div>
+      <div class="col s6 m6 l6">
+        <p>
+          La tartajea restaurant & Bistro tienen una promoción de descuento por la compra de Pan Baguette,
+Si un cliente compra 20 unidades de pan se aplica 20% off, si compra de 16 a 19 unidades se le aplica 15% off, si la cantidad es mayor a 20 unidades se le aplica 25% off, si es de 6 hasta 15 unidades se le aplica 10% off, el precio del Baguette es de $1.15 y como cortesía se le regala un Latte. 
+Mostrar el detalle de precio, descuento, total y cortesía.
+        </p>
+        <div class="brand-title ">La tartaleta & Bistro</div>
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://images8.alphacoders.com/109/thumbbig-1095212.webp">
+            <span class="card-title">Buguette</span>
+          </div>
+
+          <div class="card-content">
+            <p>It is a very delicious sandwish.</p>   
+          </div>
+        
+          <div class="card-action">
+            Pan baguetti # unidad:
+            <input class="" type="text" name="pan" id="baguetti">     
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Total<i class="material-icons right">close</i></span>
+             <label for="total" id="total"></label>
+             <a href="img/pay.html" class="btn-large yellow darken-2"><i class="material-icons">currency_bitcoin</i></a>
+             <a class="btn-large green darken-2"><i class="material-icons">attach_money</i></a>
+          </div> 
+
+           <a class="activator btn-floating halfway-fab waves-effect waves-light green" onclick="checaPromo()"><i
+              class="material-icons">shopping_cart</i></a>
+        </div>
+      </div>
+      <div class="col s3 m3 l3">
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

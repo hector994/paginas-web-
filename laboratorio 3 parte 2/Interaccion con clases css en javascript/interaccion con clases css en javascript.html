@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactuando con clases java script</title>
+    <style>
+        .thumb{
+            width: 200px;
+        }
+        .big{
+            width: 600px;
+        }
+        .titulo{
+            border: 1px solid whitesmoke;
+            background: white;
+            padding: 1ppx;
+        }
+        .bigTittle{
+            font-size: 70;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Cambiar tamaño" onclick="zoom()">
+    </form>
+    <h1 id="titulo" class="titulo">
+        Diseño web adaptable
+    </h1>
+    <img id="thumb" src="img/html.jpg" alt=""  class="thumb">
+
+
+    <script>
+        var zoom = function () {
+            //alert("Hola estudiante");
+
+            var thumb = document.getElementById("thumb");
+            if (thumb.className == "thumb") {
+                thumb.setAttribute("class","thumb big");
+            }else{
+                thumb.setAttribute("class","thumb");
+            }
+            var titulo = document.getElementById("titulo");
+            if (titulo.className == "titulo") {
+                titulo.setAttribute("class","titulo bigTittle");
+                titulo.style.backgroundColor = "yellow";
+            }else{
+                titulo.setAttribute("class","titulo");
+                titulo.style.backgroundColor = "green";
+            }
+
+            //thumb.setAttribute("class","thumb big");
+        }
+    </script>
+</body>
+</html>

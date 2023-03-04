@@ -1,0 +1,22 @@
+footer ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+}
+footer ul li {
+	list-style: none;
+	margin: 0 15px;
+}
+footer ul li a {
+	position: relative;
+	display: block;
+	width: 10px;
+	height: 10px;
+	text-align: center;
+	line-height: 5px;
+	border-radius: 10%;
+	font-size: 25px;
+}
